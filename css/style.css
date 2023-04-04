@@ -1394,10 +1394,11 @@ body.lock {
   position: absolute;
   right: 20px;
   top: 20px;
-  font-size: 24px;
+  font-size: 34px;
   color: #000000;
   z-index: 101;
   text-decoration: none;
+  transform: rotate(45deg);
 }
 
 .popup__form {

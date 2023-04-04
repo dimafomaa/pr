@@ -3,25 +3,22 @@ $(document).ready(function() {
 	$('input[type="tel"]').inputmask("+38 (999) 999-99-99");
 
 	$('form').on('submit', function (e) {
-		e.preventDefault(); // предотвращение стандартного поведения формы
+		e.preventDefault(); 
 		var form = $(this);
 
-		// отправка формы с помощью AJAX
+		
 		$.ajax({
 			url: 'send-mail.php',
 			type: 'POST',
 			data: form.serialize(),
 			success: function (data) {
-				form[0].reset(); // очистка формы
-				// Открываем модальное окно благодарности после успешной отправки формы
+				form[0].reset(); 
+				
 				const thankPopup = document.getElementById('modal-thank');
 				popupOpen(thankPopup);
 			}
 		});
 	});
-
-  
-	// закрытие модального окна при нажатии на кнопку закрытия
 	
 });
 
@@ -237,7 +234,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 (function () {
-	// проверяем поддержку
+	
 	if (!Element.prototype.closest) {
 		// реализуем
 		Element.prototype.closest = function (css) {
@@ -251,9 +248,9 @@ document.addEventListener('keydown', function (e) {
 	}
 })();
 (function () {
-	// проверяем поддержку
+	
 	if (!Element.prototype.matches) {
-		// определяем свойство
+		
 		Element.prototype.matches = Element.prototype.matchesSelector ||
 			Element.prototype.webkitMatchesSelector ||
 			Element.prototype.mozMatchesSelector ||
