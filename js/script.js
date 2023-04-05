@@ -3,22 +3,25 @@ $(document).ready(function() {
 	$('input[type="tel"]').inputmask("+38 (999) 999-99-99");
 
 	$('form').on('submit', function (e) {
-		e.preventDefault(); 
+		e.preventDefault(); // предотвращение стандартного поведения формы
 		var form = $(this);
 
-		
+		// отправка формы с помощью AJAX
 		$.ajax({
 			url: 'send-mail.php',
 			type: 'POST',
 			data: form.serialize(),
 			success: function (data) {
-				form[0].reset(); 
-				
+				form[0].reset(); // очистка формы
+				// Открываем модальное окно благодарности после успешной отправки формы
 				const thankPopup = document.getElementById('modal-thank');
 				popupOpen(thankPopup);
 			}
 		});
 	});
+
+  
+	// закрытие модального окна при нажатии на кнопку закрытия
 	
 });
 
@@ -41,6 +44,7 @@ $(document).ready(function(){
         arrows:true,
         dots:true,
         slidesToShow:4,
+        slidesToScroll:4,
         rows: 2,
         infinite: true,
         responsive: [
@@ -48,18 +52,24 @@ $(document).ready(function(){
                 breakpoint: 850,
                 settings: {
                     slidesToShow: 3,
+					slidesToScroll:3,
+
                 }
             },
             {
                 breakpoint: 650,
                 settings: {
                     slidesToShow: 2,
+					slidesToScroll:2,
+
                 }
             },
             {
                 breakpoint: 450,
                 settings: {
                     slidesToShow: 1,
+					slidesToScroll:1,
+					rows: 3,
                 }
             }
         ]
@@ -234,7 +244,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 (function () {
-	
+	// проверяем поддержку
 	if (!Element.prototype.closest) {
 		// реализуем
 		Element.prototype.closest = function (css) {
@@ -248,9 +258,9 @@ document.addEventListener('keydown', function (e) {
 	}
 })();
 (function () {
-	
+	// проверяем поддержку
 	if (!Element.prototype.matches) {
-		
+		// определяем свойство
 		Element.prototype.matches = Element.prototype.matchesSelector ||
 			Element.prototype.webkitMatchesSelector ||
 			Element.prototype.mozMatchesSelector ||
