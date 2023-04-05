@@ -640,6 +640,10 @@ body.lock {
   cursor: pointer;
 }
 
+.mfp-counter {
+  display: none;
+}
+
 .about {
   padding: 80px 0;
 }
