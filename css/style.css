@@ -1336,6 +1336,21 @@ body.lock {
   }
 }
 
+.footer__cooper {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 10px;
+  background-color: #1B1B1B;
+  color: #fff;
+}
+.footer__cooper a {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.footer__cooper a:hover {
+  color: #FFCF74;
+}
+
 .scroll-up {
   position: fixed;
   right: 30px;
