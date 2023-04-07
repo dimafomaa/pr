@@ -476,7 +476,7 @@ body.lock {
 .home-page3__item span::after {
   content: "";
   display: block;
-  width: 220px;
+  width: 210px;
   height: 1px;
   background-color: #FFCF74;
   position: absolute;
@@ -486,7 +486,7 @@ body.lock {
 }
 @media (max-width: 1150px) {
   .home-page3__item span::after {
-    width: calc(105px + 115 * (100vw - 600px) / 550);
+    width: calc(105px + 105 * (100vw - 600px) / 550);
   }
 }
 @media (max-width: 550px) {
