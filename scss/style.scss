@@ -876,7 +876,7 @@ body.lock {
 	}
 
 	@media (max-width: 450px) {
-		left: 10%;
+		left: 0;
 	}
 }
 
@@ -896,7 +896,7 @@ body.lock {
 	}
 
 	@media (max-width: 450px) {
-		right: 10%;
+		right: 0;
 	}
 
 }
@@ -974,7 +974,9 @@ body.lock {
 	&__inner {
 		position: relative;
 	}
-
+	&__slide{
+		height: auto;
+	}
 }
 
 .certificates__inner .slick-dots {
@@ -1013,41 +1015,41 @@ body.lock {
 }
 
 .certificates__inner .slick-arrow.slick-prev {
-	left: 40%;
+	left: 30%;
 	background-image: url('../img/icon/arrow.svg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 
 	@media (max-width: 850px) {
-		left: 37%;
+		left: 17%;
 	}
 
 	@media (max-width: 650px) {
-		left: 30%;
+		left: 20%;
 	}
 
 	@media (max-width: 450px) {
-		left: 10%;
+		left: 0;
 	}
 }
 
 .certificates__inner .slick-arrow.slick-next {
-	right: 40%;
+	right: 30%;
 	background-image: url('../img/icon/arrow.svg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	transform: rotate(180deg);
 
 	@media (max-width: 850px) {
-		right: 37%;
+		right: 17%;
 	}
 
 	@media (max-width: 650px) {
-		right: 30%;
+		right: 20%;
 	}
 
 	@media (max-width: 450px) {
-		right: 10%;
+		right: 0;
 	}
 
 }
@@ -1450,7 +1452,7 @@ body.lock {
 	}
 
 	&__container {
-		max-width: 615px;
+		max-width: 770px;
 		margin: 0 auto;
 	}
 

@@ -78,7 +78,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.certificates__inner').slick({
         arrows:true,
-        dots:true,
+        dots:false,
         slidesToShow:5,
         infinite: true,
         responsive: [
@@ -104,21 +104,47 @@ $(document).ready(function(){
     });
 });
 
-$(".work__container").magnificPopup({
-    delegate: "a",
-    type: "image",
-    gallery: {
-        enabled: true
-    }
+$(document).ready(function () {
+	$('.work__container').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
 
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+
+	});
 });
-$(".certificates__inner").magnificPopup({
-    delegate: "a",
-    type: "image",
-    gallery: {
-        enabled: true
-    }
+$(document).ready(function () {
+	$('.certificates__inner').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
 
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+
+	});
 });
 
 
