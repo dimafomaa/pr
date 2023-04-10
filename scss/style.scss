@@ -360,13 +360,15 @@ body.lock {
 }
 .home-page1{
 	background-image: url('../img/bg-p1.jpg');
-	@media (max-width: 550px){
+	@media (max-width: 570px){
 		padding-bottom: 30px;
 	}
 }
 .home-page2 {
 	background-image: url('../img/bg-p2.jpg');
-
+	@media (max-width: 570px){
+		padding-bottom: 30px;
+	}
 	&__inner {
 		max-width: 806px;
 		@media (max-width: 450px){
@@ -401,7 +403,7 @@ body.lock {
 		text-align: center;
 		gap: 20px;
 
-		@media (max-width: 550px){
+		@media (max-width: 570px){
 			display: block;
 			margin-top: 56px;
 		}
@@ -414,7 +416,7 @@ body.lock {
 		z-index: 2;
 		position: relative;
 		z-index: 2;
-		@media (max-width: 550px){
+		@media (max-width: 570px){
 			margin-bottom: 16px;
 			display: flex;
 			gap: 10px;
@@ -434,7 +436,7 @@ body.lock {
 			margin-bottom: 24px;
 			display: inline-flex;
 			position: relative;
-			@media (max-width: 550px){
+			@media (max-width: 570px){
 				flex: 0 0 32px;
 				margin-bottom: 0;
 			}
@@ -452,7 +454,7 @@ body.lock {
 				@media (max-width: 830px) {
 					width: calc(150px + (250 - 150) * ((100vw - 500px) / (830 - 500)));
 				}
-				@media (max-width: 550px){
+				@media (max-width: 570px){
 					width: 1px;
 					height: 100px;
 					left: 50%;
@@ -465,7 +467,7 @@ body.lock {
 	&__text {
 		font-size: 16px;
 		color: #EBEBEB;
-		@media (max-width: 550px){
+		@media (max-width: 570px){
 			text-align: left;
 		}
 	}
@@ -480,10 +482,11 @@ body.lock {
 }
 .home-page3{
 	background-image: url('../img/bg-p3.jpg');
-	@media (max-width: 550px){
+	@media (max-width: 570px){
 		padding-bottom: 30px;
 	}
 }
+
 .home-page3__item{
 	& span{
 
@@ -501,7 +504,33 @@ body.lock {
 			@media (max-width: 1150px) {
 				width: calc(105px + (210 - 105) * ((100vw - 600px) / (1150 - 600)));
 			}
-			@media (max-width: 550px){
+			@media (max-width: 570px){
+				width: 1px;
+				height: 90px;
+				left: 50%;
+			}
+	
+		}
+	}
+}
+.home-page1__item{
+	& span{
+
+		&::after {
+			content: '';
+			display: block;
+			width: 225px;
+			height: 1px;
+			background-color: #FFCF74;
+			position: absolute;
+			top: 16px;
+			left: 30px;
+			z-index: -1;
+	
+			@media (max-width: 1150px) {
+				width: calc(105px + (225 - 105) * ((100vw - 600px) / (1150 - 600)));
+			}
+			@media (max-width: 570px){
 				width: 1px;
 				height: 90px;
 				left: 50%;
