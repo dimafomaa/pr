@@ -162,7 +162,7 @@ body.lock {
 		}
 
 		@media (max-width: 768px) {
-			font-size: 28px;
+			font-size: 24px;
 			color: #fff;
 		}
 
@@ -220,8 +220,10 @@ body.lock {
 .menu {
 	position: relative;
 	z-index: 6;
-	margin-left: 50px;
-
+	// margin-left: 50px;
+	// @media (max-width: 780px) {
+	// 	margin-left: 0;
+	// }
 	@media (max-width: 768px) {
 		position: fixed;
 		top: 0;
@@ -243,7 +245,7 @@ body.lock {
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 44px;
+		gap: 34px;
 
 		@media (max-width: 768px) {
 			display: block;
@@ -475,6 +477,11 @@ body.lock {
 .home-page2__item:nth-child(3){
 	margin-bottom: 0;
 }
+.home-page1__item:nth-child(3) span {
+	&::after {
+		display: block;
+	}
+}
 .home-page2__item:nth-child(3) span {
 	&::after {
 		display: none;
@@ -493,7 +500,7 @@ body.lock {
 		&::after {
 			content: '';
 			display: block;
-			width: 210px;
+			width: 200px;
 			height: 1px;
 			background-color: #FFCF74;
 			position: absolute;
@@ -501,8 +508,8 @@ body.lock {
 			left: 30px;
 			z-index: -1;
 	
-			@media (max-width: 1150px) {
-				width: calc(105px + (210 - 105) * ((100vw - 600px) / (1150 - 600)));
+			@media (max-width: 1245px) {
+				width: calc(90px + (200 - 90) * ((100vw - 600px) / (1245 - 600)));
 			}
 			@media (max-width: 570px){
 				width: 1px;
@@ -539,8 +546,11 @@ body.lock {
 		}
 	}
 }
-.home-page3__items{
+.home-page1__items{
 	grid-template-columns: repeat(5, 1fr);
+}
+.home-page3__items{
+	grid-template-columns: repeat(6, 1fr);
 }
 .home-page3__inner{
 	max-width: 100%;
@@ -553,11 +563,17 @@ body.lock {
 		display: block;
 	}
 }
-.home-page3__item:nth-child(5) span {
+.home-page1__item:nth-child(5) span {
 	&::after {
 		display: none;
 	}
 }
+.home-page3__item:nth-child(6) span {
+	&::after {
+		display: none;
+	}
+}
+
 
 // ===============================================
 
@@ -1683,19 +1699,19 @@ body.lock {
 }
 
 .menu-footer {
-	margin-left: 50px;
+	// margin-left: 50px;
 
-	@media (max-width: 768px) {
-		margin-left: 0;
-	}
+	// @media (max-width: 780px) {
+	// 	margin-left: 0;
+	// }
 
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 44px;
+		gap: 34px;
 
 		@media (max-width: 600px) {
-			gap: calc(13px + (44 - 13) * ((100vw - 320px) / (600 - 320)));
+			gap: calc(13px + (34 - 13) * ((100vw - 320px) / (600 - 320)));
 		}
 	}
 }
