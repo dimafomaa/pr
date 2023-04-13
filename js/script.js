@@ -78,7 +78,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.certificates__inner').slick({
         arrows:true,
-        dots:false,
+        dots:true,
         slidesToShow:5,
         infinite: true,
         responsive: [
