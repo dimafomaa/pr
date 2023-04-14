@@ -6,6 +6,10 @@ $(document).ready(function() {
 		e.preventDefault(); // предотвращение стандартного поведения формы
 		var form = $(this);
 
+        // блокировка кнопки отправки формы
+		form.find('button[type="submit"]').prop('disabled', true);
+		
+		
 		// отправка формы с помощью AJAX
 		$.ajax({
 			url: 'send-mail.php',
@@ -16,6 +20,11 @@ $(document).ready(function() {
 				// Открываем модальное окно благодарности после успешной отправки формы
 				const thankPopup = document.getElementById('modal-thank');
 				popupOpen(thankPopup);
+			},
+			
+			complete: function() {
+				// разблокировка кнопки отправки формы после завершения AJAX-запроса
+				form.find('button[type="submit"]').prop('disabled', false);
 			}
 		});
 	});
