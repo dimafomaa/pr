@@ -89,24 +89,28 @@ $(document).ready(function(){
         arrows:true,
         dots:true,
         slidesToShow:5,
+		slidesToScroll: 5,
         infinite: true,
         responsive: [
             {
                 breakpoint: 850,
                 settings: {
                     slidesToShow: 3,
+					slidesToScroll: 3,
                 }
             },
             {
                 breakpoint: 650,
                 settings: {
                     slidesToShow: 2,
+					slidesToScroll: 2,
                 }
             },
             {
                 breakpoint: 450,
                 settings: {
                     slidesToShow: 1,
+					slidesToScroll: 1,
                 }
             }
         ]
