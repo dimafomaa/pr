@@ -84,38 +84,41 @@ $(document).ready(function(){
         ]
     });
 });
-$(document).ready(function(){
-    $('.certificates__inner').slick({
-        arrows:true,
-        dots:true,
-        slidesToShow:5,
-		slidesToScroll: 5,
-        infinite: true,
-        responsive: [
-            {
-                breakpoint: 850,
-                settings: {
-                    slidesToShow: 3,
-					slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 650,
-                settings: {
-                    slidesToShow: 2,
-					slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 1,
-					slidesToScroll: 1,
-                }
-            }
-        ]
-    });
-});
+// $(document).ready(function(){
+//     $('.certificates__inner').slick({
+//         arrows:true,
+//         dots:true,
+//         slidesToShow:5,
+// 		slidesToScroll: 5,
+//         infinite: true,
+//         responsive: [
+//             {
+//                 breakpoint: 850,
+//                 settings: {
+//                     slidesToShow: 3,
+// 					slidesToScroll: 3,
+//                 }
+//             },
+//             {
+//                 breakpoint: 650,
+//                 settings: {
+//                     slidesToShow: 2,
+// 					slidesToScroll: 2,
+// 					infinite: true,
+// 					arrows:true,
+//         			dots:true,
+//                 }
+//             },
+//             {
+//                 breakpoint: 450,
+//                 settings: {
+//                     slidesToShow: 1,
+// 					slidesToScroll: 1,
+//                 }
+//             }
+//         ]
+//     });
+// });
 
 $(document).ready(function () {
 	$('.work__container').magnificPopup({

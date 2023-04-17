@@ -1059,9 +1059,17 @@ body.lock {
 .certificates {
 	padding: 40px 0;
 	background-color: #FBFBFB;
-
+	text-align: center;
+	&__title{
+		@media (max-width: 450px){
+			margin-bottom: 20px;
+		}
+	}
 	&__inner {
 		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__slide {

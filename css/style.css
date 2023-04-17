@@ -981,9 +981,18 @@ body.lock {
 .certificates {
   padding: 40px 0;
   background-color: #FBFBFB;
+  text-align: center;
+}
+@media (max-width: 450px) {
+  .certificates__title {
+    margin-bottom: 20px;
+  }
 }
 .certificates__inner {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .certificates__img {
   width: 100%;
