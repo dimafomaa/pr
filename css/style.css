@@ -835,6 +835,11 @@ body.lock {
      object-position: bottom;
 }
 
+.work__img--nine {
+  -o-object-position: center;
+     object-position: center;
+}
+
 .slick-track {
   display: flex;
   justify-content: space-between;
